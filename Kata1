@@ -1,0 +1,22 @@
+def descending_order(num):
+    # This script takes in a non-negative integer and returns an integer in decending order
+    
+    num_str = str(num)
+    
+    num_list = list(num_str)
+    
+    limit_upper = len(num_list) - 1
+    
+    for x in range( 0, limit_upper):
+    
+        for xx in range( 0, limit_upper):
+        
+            if num_list[xx] < num_list[xx + 1]:
+            
+                var = num_list[xx]
+                num_list[xx] = num_list[xx + 1]
+                num_list[xx + 1] = var
+    
+    new_num = int("".join(num_list))
+    
+    return(new_num)
